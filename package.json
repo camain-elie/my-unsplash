@@ -1,0 +1,19 @@
+{
+  "name": "my-unsplash",
+  "version": "1.0.0",
+  "description": "devchallenge.io - My Unsplash challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camain-elie/my-unsplash.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camain-elie/my-unsplash/issues"
+  },
+  "homepage": "https://github.com/camain-elie/my-unsplash#readme"
+}
