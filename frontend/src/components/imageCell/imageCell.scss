@@ -1,0 +1,87 @@
+@import '../style/colors.scss';
+
+.image-cell{
+
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin: 100px;
+    user-select: none;
+    font-family: Montserrat, sans-serif;
+    //font-weight: 500;
+
+    &__content{
+
+        img{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+            line-height: 0;
+            display: block;
+        }
+    }
+
+    &__action{
+        position: absolute;
+        top: 0;
+        background: rgba(0,0,0,0.6);
+        opacity: 0;
+        color: white;
+        width: 100%;
+        height: 100%;
+        transition: 0.4s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    &:hover .image-cell__action{
+        opacity: 1;
+        transition: 0.4s;
+    }
+
+    &__buttons{
+        margin: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__button{
+        font-size: 0.9rem;
+        display: inline-block;
+        padding: 4px 8px;
+        margin: 5px;
+        border: 1px solid;
+        border-radius: 14px;
+        color: $validate-color;
+        font-weight: 600;
+        
+        &:hover{
+            background: rgba($validate-color, 0.15);
+        }
+        &:active{
+            background: rgba($validate-color, 0.3);
+        }
+    }
+
+    &__button--alert{
+        color: $alert-color;
+
+        &:hover{
+            background: rgba($alert-color, 0.15);
+        }
+        &:active{
+            background: rgba($alert-color, 0.3);
+        }
+    }
+
+    &__label{
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin: 30px;
+    }
+}
