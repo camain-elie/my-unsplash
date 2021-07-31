@@ -30,7 +30,7 @@ function Layout (props) {
         return result;
     }
 
-    const images = generateImages(props.imgArray);
+    const images = generateImages(filterArray(props.imgArray, props.searchLabel));
 
     return(
         <div className="layout" >
