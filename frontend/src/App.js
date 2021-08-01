@@ -1,4 +1,3 @@
-import ImageCell from './components/imageCell/imageCell';
 import Layout from './components/layout/layout';
 import Header from './components/header/header';
 

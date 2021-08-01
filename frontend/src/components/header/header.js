@@ -1,16 +1,26 @@
+import { useState } from 'react';
+
 import './header.scss';
 
 function Header (props) {
+
+    const [searchValue, setSearchValue] = useState('');
 
     return(
         <div className="header">
 
             <div className="header__left-elements">
 
-                <img src={props.logo} alt="My Unsplash logo" ></img>
+                <img src={props.logoIMG} alt="My Unsplash logo" ></img>
                 <div className="header__searchbar">
-                    <input type="text">
-                    </input>
+                    
+                    <p className={`material-icons header__input-icon${searchValue === '' ? "" : "--text"}`} >search</p>
+                    <input 
+                        type="text"
+                        onChange={(e) => setSearchValue(e.target.value) } 
+                        placeholder="Search by name"    
+                    />
+
                 </div>
             </div>
 
