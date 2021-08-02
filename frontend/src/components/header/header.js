@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import Button from '../button/button';
 
 import './header.scss';
 
 function Header (props) {
 
-    const [searchValue, setSearchValue] = useState('');
 
     return(
         <div className="header">
@@ -14,10 +13,11 @@ function Header (props) {
                 <img src={props.logoIMG} alt="My Unsplash logo" ></img>
                 <div className="header__searchbar">
                     
-                    <p className={`material-icons header__input-icon${searchValue === '' ? "" : "--text"}`} >search</p>
+                    <p className={`material-icons header__input-icon${props.searchValue === '' ? "" : "--text"}`} >search</p>
                     <input 
                         type="text"
-                        onChange={(e) => setSearchValue(e.target.value) } 
+                        onChange={(e) => props.handleSearch(e)} 
+                        value={props.searchValue}
                         placeholder="Search by name"    
                     />
 
@@ -25,7 +25,7 @@ function Header (props) {
             </div>
 
             <div className="header__add-element">
-
+                <Button text="Add a photo" />
             </div>
         </div>
     );

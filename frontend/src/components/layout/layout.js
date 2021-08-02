@@ -12,7 +12,7 @@ const filterArray = (array, labelString) => {
 
 function Layout (props) {
 
-    console.log(filterArray(props.imgArray, props.searchLabel))
+    //console.log(filterArray(props.imgArray, props.searchLabel))
 
     const generateImages = (imgArray) => {
         const result = imgArray.map((item, index) => 

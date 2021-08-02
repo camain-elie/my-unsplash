@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Layout from './components/layout/layout';
 import Header from './components/header/header';
 
@@ -12,19 +14,22 @@ const handleDelete = (url) => {
 
 function App() {
 
+  const [searchValue, setSearchValue] = useState('');
+
+
   return (
     <div className="App">
 
       <Header 
         logoIMG={logo}
-        handleSearch={(e) => console.log(e)}
-        handleAddElement={(e) => console.log(e)}
+        handleSearch={(e) => setSearchValue(e.target.value)}
+        handleAddElement={(e) => console.log(e.target.value)}
       />
 
       <Layout 
         handleDelete={handleDelete}
         imgArray={testFile}
-        searchLabel=""
+        searchLabel={searchValue}
       />
 
     </div>
