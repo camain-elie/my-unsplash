@@ -8,8 +8,8 @@ import './App.scss';
 import testFile from './json_test_file.json';
 import logo from './assets/my_unsplash_logo.svg';
 
-const handleDelete = (url) => {
-  console.log('delete ' + url);
+const handleDelete = (id) => {
+  console.log('delete ' + id);
 }
 
 function App() {

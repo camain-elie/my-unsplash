@@ -1,39 +1,38 @@
 [
     {
-        "imageURL": "https://images.unsplash.com/photo-1622495549609-523be9cc6f32?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2OHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
+        "url": "https://images.unsplash.com/photo-1622495549609-523be9cc6f32?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2OHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
         "label": "girl drinking soda taco shop"
     },
     {
-        "imageURL": "https://images-na.ssl-images-amazon.com/images/I/A1PQFToBqDL.jpg",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/A1PQFToBqDL.jpg",
         "label": "book universe amazon galaxy"
     },
     {
-        "imageURL": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg",
         "label": "single banana yellow white"
     },
     {
-        "imageURL": "https://assets.unenvironment.org/styles/article_billboard_image/s3/2021-05/alberta-2297204_1920.jpg?h=1483c54f&amp;itok=GdjA9GRu",
+        "url": "https://assets.unenvironment.org/styles/article_billboard_image/s3/2021-05/alberta-2297204_1920.jpg?h=1483c54f&amp;itok=GdjA9GRu",
         "label": "nature mountain lake forest landscape"
     },
     {
-        "imageURL": "https://cdn.futura-sciences.com/buildsv6/images/wide1920/d/3/b/d3b819bfbd_50156986_relation-humain-nature.jpg",
+        "url": "https://cdn.futura-sciences.com/buildsv6/images/wide1920/d/3/b/d3b819bfbd_50156986_relation-humain-nature.jpg",
         "label": "heads trees bird art thought"
     },
     {
-        "imageURL": "https://www.universetoday.com/wp-content/uploads/2020/06/STScI-H-p2031b-m-2000x1778-1.jpg",
+        "url": "https://www.universetoday.com/wp-content/uploads/2020/06/STScI-H-p2031b-m-2000x1778-1.jpg",
         "label": "nebulae stars galaxies milky-way breathtaking"
     },
     {
-        "imageURL": "https://i.ytimg.com/vi/xyEfr9icbW4/maxresdefault.jpg",
+        "url": "https://i.ytimg.com/vi/xyEfr9icbW4/maxresdefault.jpg",
         "label": "desktop setup idea modern"
     },
     {
-        "imageURL": "https://cdn.londonandpartners.com/-/media/images/london/visit/things-to-do/sightseeing/london-attractions/tower-bridge/thames_copyright_visitlondon_antoinebuchet640x360.jpg?mw=640&hash=27AEBE2D1B7279A196CC1B4548638A9679BE107A",
+        "url": "https://cdn.londonandpartners.com/-/media/images/london/visit/things-to-do/sightseeing/london-attractions/tower-bridge/thames_copyright_visitlondon_antoinebuchet640x360.jpg?mw=640&hash=27AEBE2D1B7279A196CC1B4548638A9679BE107A",
         "label": "london england travel bridge tames"
     },
     {
-        "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG",
         "label": "eiffel tower paris france travel vertical"
     }
 ]
-

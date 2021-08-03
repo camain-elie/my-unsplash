@@ -16,7 +16,7 @@ function ImageCell (props) {
                         Copy URL
                     </p>
                     <p className="image-cell__button image-cell__button--alert"
-                        onClick={() => props.handleDelete(props.imageURL)} >
+                        onClick={() => props.handleDelete(props.imageID)} >
                         Delete
                     </p>
                 </div>

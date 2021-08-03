@@ -20,7 +20,8 @@ function Layout (props) {
                 return(
                     <ImageCell
                         key={index} 
-                        imageURL={item.imageURL}
+                        imageURL={item.url}
+                        imageID={item.id}
                         label={item.label}
                         handleDelete={props.handleDelete}
                     />
