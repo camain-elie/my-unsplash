@@ -1,5 +1,3 @@
-import Button from '../button/button';
-
 import './header.scss';
 
 function Header (props) {
@@ -25,7 +23,12 @@ function Header (props) {
             </div>
 
             <div className="header__add-element">
-                <Button text="Add a photo" />
+                <button
+                    className="button button--validate"
+                    onClick={() => props.handleAddElement()}
+                >
+                    Add a photo
+                </button>
             </div>
         </div>
     );

@@ -7,6 +7,7 @@ exports.postImage = (req, res, next) => {
         return res.status(401).send({ error: true, message: 'Image data missing' });
     }
     
+    //could use uuid
     const imageList = getImageData();
     imageData.id = (imageData.url + '_' + Date.now());
     imageList.push(imageData);
@@ -22,6 +23,7 @@ exports.getImages = (req, res, next) => {
 };
 
 exports.deleteImage = (req, res, next) => {
+    console.log(req.body)
     const imageID = req.body.imageID;
     const imageList = getImageData();
 
@@ -33,7 +35,11 @@ exports.deleteImage = (req, res, next) => {
 
     saveImageData(filterImage);
 
-    res.status(200).send({ success: true, message: 'Image removed successfully' });
+    res.status(200).send({
+        success: true,
+        imageList: filterImage,
+        message: 'Image removed successfully'
+    });
 };
 
 const getImageData = () => {
