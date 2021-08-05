@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+@import '../style/colors.scss';
+@import '../style/button.scss';
+
+.add-element{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans JP', sans-serif;
+
+    &--off{
+        display: none;
+    }
+
+    &__panel{
+        border-radius: 1em;
+        background: white;
+        padding: 1em;
+        max-width: 800px;
+        max-height: 500px;
+    }
+
+    form{
+
+        label, input{
+            display: block;
+            text-align: left;
+        }
+
+        label{
+            margin: 20px 0;
+        }
+        input{
+            margin: 10px 0;
+        }
+    }
+}

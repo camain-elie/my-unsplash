@@ -3,6 +3,7 @@ import { addImage, deleteImage, getImages } from './services/image';
 
 import Layout from './components/layout/layout';
 import Header from './components/header/header';
+import AddElement from './components/addElement/addElement';
 
 import './App.scss';
 
@@ -19,6 +20,7 @@ function App() {
   const [imageList, setImageList] = useState([]);
   const [dataIsLoaded, setDataIsLoaded] = useState(false);
   const [userMessage, setUserMessage] = useState('');
+  const [addElement, setAddElement] = useState(false);
   
   useEffect(() => {
     if(!dataIsLoaded){getImages()
@@ -29,8 +31,8 @@ function App() {
       .catch(error => console.log(error));}
   });
 
+
   const handleDelete = (id) => {
-    console.log('delete ' + id);
     deleteImage(id)
       .then(res => {
         setImageList(res.data.imageList);
@@ -38,6 +40,33 @@ function App() {
       })
       .catch(error => setUserMessage(error));
   }
+
+
+  const handleAddElement = () => {
+    setAddElement(true);
+  }
+
+
+  const handleSubmit = (label, photoURL) => {
+    addImage(photoURL, label)
+      .then(res => {
+        console.log(res);
+        setImageList(res.data.imageList);
+        setAddElement(false);
+      })
+      .catch(error => console.log(error));
+
+    console.log(label, photoURL)
+    console.log('sub')
+  }
+
+
+
+  const handleExit = (e) => {
+    e.preventDefault();
+    setAddElement(false);
+  }
+
 
   return (
     <div className="App">
@@ -48,7 +77,7 @@ function App() {
             logoIMG={logo}
             searchValue={searchValue}
             handleSearch={(e) => setSearchValue(e.target.value)}
-            handleAddElement={(e) => console.log(e.target.value)}
+            handleAddElement={handleAddElement}
           />
 
           <Layout 
@@ -56,6 +85,13 @@ function App() {
             imgArray={imageList}
             searchLabel={searchValue}
           />
+
+          {addElement && <AddElement 
+            display={addElement}
+            handleSubmit={handleSubmit}
+            handleExit={handleExit}
+          />}
+
         </>
       }
     </div>

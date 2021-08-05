@@ -23,6 +23,7 @@
     }
 
     &--silent{
+        font-weight: 500;
         background: rgba(0,0,0,0);
         color: $placeholder-color;
     }

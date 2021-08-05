@@ -10,7 +10,7 @@ exports.postImage = (req, res, next) => {
     //could use uuid
     const imageList = getImageData();
     imageData.id = (imageData.url + '_' + Date.now());
-    imageList.push(imageData);
+    imageList.unshift(imageData);
 
     saveImageData(imageList);
 
@@ -23,7 +23,6 @@ exports.getImages = (req, res, next) => {
 };
 
 exports.deleteImage = (req, res, next) => {
-    console.log(req.body)
     const imageID = req.body.imageID;
     const imageList = getImageData();
 
