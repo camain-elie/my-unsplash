@@ -3,9 +3,9 @@ import ImageCell from '../imageCell/imageCell';
 import './layout.scss';
 
 const filterArray = (array, labelString) => {
-    let labelArray = labelString.split(' ');
+    let labelArray = labelString.toLowerCase().trim().split(' ');
     const filteredArray = array.filter(item => {
-        return (new RegExp(labelArray.join("|")).test(item.label));
+        return (new RegExp(labelArray.join("|")).test(item.label.toLowerCase()));
     });
     return filteredArray;
 }

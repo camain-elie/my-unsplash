@@ -46,18 +46,20 @@ function AddElement (props) {
                         />
                     </label>
 
-                    <button
-                        className="button button--silent"
-                        onClick={(e) => props.handleExit(e)}
-                    >
-                        Cancel
-                    </button>
-                    <button
-                        className="button button--validate"
-                        type="submit"
-                    >
-                        Submit
-                    </button>
+                    <div className="add-element__buttons">
+                        <button
+                            className="button button--silent"
+                            onClick={(e) => props.handleExit(e)}
+                        >
+                            Cancel
+                        </button>
+                        <button
+                            className="button button--validate"
+                            type="submit"
+                        >
+                            Submit
+                        </button>
+                    </div>
                 </form>
 
             </div>
