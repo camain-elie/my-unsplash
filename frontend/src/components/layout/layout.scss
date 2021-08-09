@@ -1,4 +1,14 @@
 .layout{
     column-count: 4;
     column-gap: 40px;
+
+    @media (min-width: 900px) AND (max-width: 1400px){
+        column-count: 3;
+    }
+    @media (min-width: 500px) AND (max-width: 900px){
+        column-count: 2;
+    }
+    @media (max-width: 500px){
+        column-count: 1;
+    }
 }

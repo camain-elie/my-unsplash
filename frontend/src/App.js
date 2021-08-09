@@ -49,7 +49,7 @@ function App() {
         setImageList(res.data.imageList);
         setAddElement(false);
       })
-      .catch(error => console.log(error));
+      .catch(error => setUserMessage(error));
   }
 
 

@@ -12,6 +12,7 @@
 
     &__left-elements{
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__searchbar{
