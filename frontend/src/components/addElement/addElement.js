@@ -2,17 +2,49 @@ import { useState } from 'react';
 
 import './addElement.scss';
 
+// clever way to verify the content of a url, found on :
+// https://stackoverflow.com/questions/9714525/javascript-image-url-verify
+function testImageURL(url, timeoutTime){
+    return new Promise(function (resolve, reject) {
+        let timeout = timeoutTime || 5000;
+        let timer, img = new Image();
+        img.onerror = img.onabort = function () {
+            clearTimeout(timer);
+            reject("error");
+        };
+        img.onload = function () {
+            clearTimeout(timer);
+            resolve("success");
+        };
+        timer = setTimeout( function () {
+            //reset .src to invalid URL so it stops previous loading,
+            //but doesn't trigger new load
+            img.src = "//!!!/test.jpg";
+        }, timeout);
+        img.src = url;
+    })
+}
+
+
 function AddElement (props) {
 
     const [label, setLabel] = useState('');
     const [photoURL, setPhotoURL] = useState('');
+    const [userMessage, setUserMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if(!label || !photoURL) {
-            console.log('every field must be complete');
+            setUserMessage('Every field must be complete');
         }else{
-            props.handleSubmit(label, photoURL);
+            testImageURL(photoURL, 2000)
+                .then(() => {
+                    setUserMessage('');
+                    props.handleSubmit(label, photoURL);
+                })
+                .catch(error => {
+                    setUserMessage('Error : invalid image URL')
+                })
         }
     }
 
@@ -45,6 +77,8 @@ function AddElement (props) {
                             onChange={(e) => setPhotoURL(e.target.value)}
                         />
                     </label>
+
+                    <p className="add-element__message">{userMessage}</p>
 
                     <div className="add-element__buttons">
                         <button

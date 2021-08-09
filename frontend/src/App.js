@@ -7,12 +7,7 @@ import AddElement from './components/addElement/addElement';
 
 import './App.scss';
 
-import testFile from './json_test_file.json';
 import logo from './assets/my_unsplash_logo.svg';
-
-const handleDelete = (id) => {
-  console.log('delete ' + id);
-}
 
 function App() {
 
@@ -55,9 +50,6 @@ function App() {
         setAddElement(false);
       })
       .catch(error => console.log(error));
-
-    console.log(label, photoURL)
-    console.log('sub')
   }
 
 
