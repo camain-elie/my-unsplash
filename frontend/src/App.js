@@ -14,7 +14,6 @@ function App() {
   const [searchValue, setSearchValue] = useState('');
   const [imageList, setImageList] = useState([]);
   const [dataIsLoaded, setDataIsLoaded] = useState(false);
-  const [userMessage, setUserMessage] = useState('');
   const [addElement, setAddElement] = useState(false);
   
   useEffect(() => {
@@ -29,11 +28,8 @@ function App() {
 
   const handleDelete = (id) => {
     deleteImage(id)
-      .then(res => {
-        setImageList(res.data.imageList);
-        setUserMessage('');
-      })
-      .catch(error => setUserMessage(error));
+      .then(res => setImageList(res.data.imageList))
+      .catch(error => console.log(error));
   }
 
 
@@ -49,7 +45,7 @@ function App() {
         setImageList(res.data.imageList);
         setAddElement(false);
       })
-      .catch(error => setUserMessage(error));
+      .catch(error => console.log(error));
   }
 
 
